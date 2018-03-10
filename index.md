@@ -5,7 +5,7 @@
 以动态代理为核心
 
 ````
-[Redis多机集群](http://www.cnblogs.com/cheuks/p/5702951.html)
+#### [Redis多机集群](http://www.cnblogs.com/cheuks/p/5702951.html)
 ````
 	部署档案记录。
 	对应的java 集群客户端整合在original-cache包
