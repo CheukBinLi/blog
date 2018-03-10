@@ -5,4 +5,12 @@
 以动态代理为核心
 
 ````
-https://github.com/fdisk123/original/tree/snapshot2.11
+[Redis多机集群](http://www.cnblogs.com/cheuks/p/5702951.html)
+````
+	部署档案记录。
+	对应的java 集群客户端整合在original-cache包
+````
+[连接](https://github.com/fdisk123/original/tree/2.20/original-cache)
+````
+	注意：真集群只有使用lua脚本才能做到一性操作。一般抢购/红包，秒杀，都会在redis里做操作合理性校验。
+````
