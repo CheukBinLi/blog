@@ -1,3 +1,21 @@
+### 导入在git里的maven仓库引用(引jar)
+````
+只需在pom加入私有库信息
+	<repositories>
+		<repository>
+			<id>original-maven-repository</id>
+			<!-- 直接把fdisk123/original/snapshot2.11换为你自己的GIT库路径即可-->
+			<url>https://raw.github.com/fdisk123/original/snapshot2.11</url>
+		</repository>
+	</repositories>
+	
+	<!--引入依赖包-->
+	<dependency>
+		<groupId>com.cheuks.bin</groupId>
+		<artifactId>original-rmi</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+```
 #### [轻量级RPC长连接脚手架](https://github.com/fdisk123/original/tree/snapshot2.11)
 [![](https://camo.githubusercontent.com/f50b84e13fdbb61d847742c34259c58469c7d2b2/68747470733a2f2f7472617669732d63692e6f72672f70616765732d7468656d65732f6172636869746563742e7376673f6272616e63683d6d6173746572)](https://github.com/fdisk123/original/tree/snapshot2.11)  
 ```` 
@@ -6,6 +24,7 @@
 
 ````
 #### [Redis多机集群](http://www.cnblogs.com/cheuks/p/5702951.html)
+[![](https://camo.githubusercontent.com/f50b84e13fdbb61d847742c34259c58469c7d2b2/68747470733a2f2f7472617669732d63692e6f72672f70616765732d7468656d65732f6172636869746563742e7376673f6272616e63683d6d6173746572)](http://www.cnblogs.com/cheuks/p/5702951.html)  
 ````
 	部署档案记录。
 	对应的java 集群客户端整合在original-cache包
