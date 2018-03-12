@@ -35,4 +35,4 @@
 ````
 
 #### [一些常用的Dockerfile](https://github.com/CheukBinLi/DockerHub)
-方便自己方便别人 apache httpd  /  nginx  / tomcat 8
+方便自己方便别人 apache httpd  /  nginx  / tomcat 8 / jenkins + docker离线安装，部署脚本
