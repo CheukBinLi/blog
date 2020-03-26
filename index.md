@@ -68,7 +68,14 @@ redis集群需要至少要三个master节点，我们这里搭建三个master节
 
 第五步：分别启动6个redis实例，然后检查是否启动成功 （1）/usr/local/redis-5.0.2/src/redis-server /usr/local/redis-cluster/800*/redis.conf （2）ps -ef | grep redis 查看是否启动成功
 
-第六步：用redis-cli创建整个redis集群(redis5以前的版本集群是依靠ruby脚本redis-trib.rb实现) （1）/usr/local/redis-5.0.2/src/redis-cli -a zhuge --cluster create --cluster-replicas 1 192.168.0.61:8001 192.168.0.62:8002 192.168.0.63:8003 192.168.0.61:8004 192.168.0.62:8005 192.168.0.63:8006 代表为每个创建的主服务器节点创建一个从服务器节点 第七步：验证集群： （1）连接任意一个客户端即可：./redis-cli -c -h -p (-a访问服务端密码，-c表示集群模式，指定ip地址和端口号）如：/usr/local/redis-5.0.2/src/redis-cli -a zhuge -c -h 192.168.0.61 -p 800* （2）进行验证： cluster info（查看集群信息）、cluster nodes（查看节点列表） （3）进行数据操作验证 （4）关闭集群则需要逐个进行关闭，使用命令： /usr/local/redis/bin/redis-cli -a zhuge -c -h 192.168.0.60 -p 800* shutdown
+第六步：用redis-cli创建整个redis集群(redis5以前的版本集群是依靠ruby脚本redis-trib.rb实现) 
+/usr/local/redis-5.0.2/src/redis-cli -a zhuge --cluster create --cluster-replicas 1 192.168.0.61:8001 192.168.0.62:8002 192.168.0.63:8003 192.168.0.61:8004 192.168.0.62:8005 192.168.0.63:8006 代表为每个创建的主服务器节点创建一个从服务器节点 
+第七步：验证集群： 
+（1）连接任意一个客户端即可：./redis-cli -c -h -p (-a访问服务端密码，-c表示集群模式，指定ip地址和端口号）
+    如：/usr/local/redis-5.0.2/src/redis-cli -a zhuge -c -h 192.168.0.61 -p 800* 
+（2）进行验证： cluster info（查看集群信息）、cluster nodes（查看节点列表） 
+（3）进行数据操作验证 
+（4）关闭集群则需要逐个进行关闭，使用命令： /usr/local/redis/bin/redis-cli -a zhuge -c -h 192.168.0.60 -p 800* shutdown
 ````
 
 #### [Redis多机集群-3.0](https://github.com/fdisk123/original/tree/2.20/original-cache)
